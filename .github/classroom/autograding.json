@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Main_test",
+      "setup": "sudo -H pip3 install pytest pandas",
+      "run": "pytest",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 15,
+      "points": 30
+    }
+  ]
+}
