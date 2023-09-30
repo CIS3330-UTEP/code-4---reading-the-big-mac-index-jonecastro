@@ -5,6 +5,7 @@ big_mac_file = './big-mac-full-index.csv'
 df = pd.read_csv(big_mac_file)
 print(df.columns)
 
+
 def get_big_mac_price_by_year(year, country_code):
     country_code = country_code.upper()
     df_by_date = df[df['date'].str.startswith(str(year)) & (df['iso_a3'] == country_code)]
