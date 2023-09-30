@@ -24,6 +24,7 @@ def get_the_cheapest_big_mac_price_by_year(year):
     result = f"{cheapest_burger['name']}({cheapest_burger['iso_a3']}): ${round(cheapest_burger['dollar_price'], 2)}"
     return result
 
+
 def get_the_most_expensive_big_mac_price_by_year(year):
     new_query = f"(date >= '{year}-01-01' & date <= '{year}-12-31')"
     df_by_year = df.query(new_query)
