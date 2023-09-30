@@ -1,7 +1,7 @@
 import csv
 import pandas as pd
 
-big_mac_file = "big-mac-full-index.csv"
+big_mac_file = './big-mac-full-index.csv'
 df = pd.read_csv(big_mac_file)
 
 
@@ -35,7 +35,7 @@ def get_the_most_expensive_big_mac_price_by_year(year):
 
 if __name__ == "__main__":
     year = '2000'
-    country_code = 'mex'
+    country_code = 'mxn'
 
     print("Average Big Mac price by year and country:", get_big_mac_price_by_year(year, country_code))
     print("Average Big Mac price by country:", get_big_mac_by_country(country_code))
