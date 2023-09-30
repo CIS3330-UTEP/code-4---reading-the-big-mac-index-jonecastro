@@ -1,7 +1,7 @@
 import csv
 import pandas as pd
 
-big_mac_file = 'big-mac-full-index.csv'
+big_mac_file = './big-mac-full-index.csv'
 df = pd.read_csv(big_mac_file)
 
 
@@ -21,7 +21,7 @@ def get_the_cheapest_big_mac_price_by_year(year):
     df_by_year = df.query(new_query)
     index_of_min_value = df_by_year['dollar_price'].idxmin()
     cheapest_burger = df_by_year.loc[index_of_min_value]
-    result = f"{cheapest_burger['name']}({cheapest_burger['iso_a3']}): $(round(cheapest_burger['dollar_price'], 2))"
+    result = f"{cheapest_burger['name']}({cheapest_burger['iso_a3']}), ${round(cheapest_burger['dollar_price'], 2)}"
     return result
 
 
@@ -30,7 +30,7 @@ def get_the_most_expensive_big_mac_price_by_year(year):
     df_by_year = df.query(new_query)
     index_of_max_value = df_by_year['dollar_price'].idxmax()
     expensive_burger = df_by_year.loc[index_of_max_value]
-    result = f"{expensive_burger['name']}({expensive_burger['iso_a3']}): ${round(expensive_burger['dollar_price'], 2)}"
+    result = f"{expensive_burger['name']}({expensive_burger['iso_a3']}), ${round(expensive_burger['dollar_price'], 2)}"
     return result
 
 if __name__ == "__main__":
