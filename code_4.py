@@ -1,10 +1,11 @@
 import csv
 import pandas as pd
-pd.read_csv("big-mac-full-index.csv")
+
+
 
 big_mac_file = 'big-mac-full-index.csv'
 df = pd.read_csv(big_mac_file)
-
+pd.read_csv("big-mac-full-index.csv")
 
 def get_big_mac_price_by_year(year, country_code):
     country_code = country_code.upper()
