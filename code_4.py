@@ -42,4 +42,7 @@ if __name__ == "__main__":
     print("Average Big Mac price by country:", get_big_mac_price_by_country(country_code))
     print("Cheapest Big Mac price by year:", get_the_cheapest_big_mac_price_by_year(year))
     print("Most Expensive Big Mac price by year:", get_the_most_expensive_big_mac_price_by_year(year))
+
+
+
     
